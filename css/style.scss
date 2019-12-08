@@ -35,14 +35,14 @@ ul {
 .o-pricingTable {
     color: var(--purple-dark);
     padding-top: 5rem;
-    height: 95vh;
+    height: 88vh;
 }
 
 //  TITLE
 .a_pricingTitle {
-    font-size:2.4rem;
+    font-size:3rem;
     text-align: center;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
 }
 
 .o-pricingToggle {
@@ -52,12 +52,13 @@ ul {
     margin-bottom: 7rem;
 
     & p {
-        font-size: 1rem;
+        font-size: 1.3rem;
         color: var(--purple);
     }
 
     & input#price-toggle {
-        display: none;
+        position: absolute;
+        left: -9999px;
     }
 
     & .a-toggleSwitch {
@@ -103,7 +104,7 @@ ul {
 
     text-align: center;
     background: white;
-    padding: 2rem;
+    padding: 3rem;
     border-radius: 1rem;
 
     &__title {
@@ -111,8 +112,8 @@ ul {
     }
 
     &__price {
-        font-size: 5rem;
-        padding-bottom: 1.5rem;
+        font-size: 7.5rem;
+        padding: 1.5rem 0;
         display: flex;
 
         &.-monthly {
@@ -121,8 +122,8 @@ ul {
     }
 
     & p span {
-        font-size: 2.5rem;
-        padding-right: .5rem;
+        font-size: 4rem;
+        padding-right: .8rem;
         align-self: center;
     }
 
@@ -132,30 +133,31 @@ ul {
         justify-content: space-between;
         align-items: stretch;
         
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
 
         & li {
-            padding: 1rem 0;
+            padding: 1.5rem 0;
             border-top: solid 1px rbga(255, 255, 255, .3);
             border-bottom: solid 1px rgba($color: var(--gray-light), $alpha: 0.4);
+            font-size: 1.5rem;
         }
 
-        // & li:not(:last-child){
-        //     border-bottom: solid 1px var(--gray-light);
-        // }
+        & li:not(:last-child){
+            border-bottom: solid 1px var(--gray-light);
+        }
     }
 
     &__btn {
 
-        padding: 1rem;
+        padding: 1.2rem;
         background: var(--primary);
         border-radius: 0.5rem;
 
-        font-size: 0.8rem;
         color:white;
+        font-size: 1.3rem;
         text-decoration: none;
         text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
 
 
         &.-white {
@@ -167,7 +169,7 @@ ul {
     &.-purple {
         background: var(--primary);
         color: white;
-        padding: 5rem 2rem;
+        padding: 5rem 3rem;
 
         // & .m-card__features {
         //     border-top: solid 1px var(--purple);
@@ -176,6 +178,13 @@ ul {
 
     }
 
+}
 
+.attribution {
+    text-align: center;
+    padding: 2rem;
 
+    a:link {
+        color: var(--purple);
+    }
 }
