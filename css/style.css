@@ -1,0 +1,80 @@
+:root {
+  /* Colors */
+  --primary: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  --gray-light: hsl(240, 78%, 98%);
+  --purple-light: hsl(234, 14%, 74%);
+  --purple: hsl(233, 13%, 49%);
+  --purple-dark: hsl(232, 13%, 33%);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 62.5%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.5rem;
+  background: url(/images/bg-top.svg) top right no-repeat, url(/images/bg-bottom.svg) bottom left no-repeat;
+  background-color: var(--gray-light);
+}
+
+.o-pricingTable {
+  color: var(--purple-dark);
+  padding-top: 5rem;
+}
+
+.a_pricingTitle {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.o-pricingToggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.o-pricingToggle p {
+  font-size: 1rem;
+  color: var(--purple);
+}
+
+.o-pricingToggle input#price-toggle {
+  display: none;
+}
+
+.o-pricingToggle .a-toggleSwitch {
+  height: 3rem;
+  width: 6rem;
+  border-radius: 6rem;
+  background: var(--primary);
+  position: relative;
+  margin: 0 2rem;
+  cursor: pointer;
+}
+
+.o-pricingToggle .a-toggleSwitch::before {
+  content: '';
+  height: 2.4rem;
+  width: 2.4rem;
+  background: var(--gray-light);
+  border-radius: 50%;
+  position: absolute;
+  top: 0.3rem;
+  left: 0.4rem;
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
+}
+
+.o-pricingToggle input[type=checkbox]:checked + .a-toggleSwitch::before {
+  left: 3.2rem;
+}
+/*# sourceMappingURL=style.css.map */
