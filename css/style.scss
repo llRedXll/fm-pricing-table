@@ -5,7 +5,8 @@
 
     --gray-light: hsl(240, 78%, 98%);
     --purple-light: hsl(234, 14%, 74%);
-    --purple: hsl(233, 13%, 49%);
+    --purple: hsl(237, 63%, 64%);
+    --purple-gray: hsl(233, 13%, 49%);
     --purple-dark: hsl(232, 13%, 33%);
 
     font-family: 'Montserrat', sans-serif;
@@ -53,7 +54,7 @@ ul {
 
     & p {
         font-size: 1.3rem;
-        color: var(--purple);
+        color: var(--purple-gray);
     }
 
     & input#price-toggle {
@@ -137,8 +138,6 @@ ul {
 
         & li {
             padding: 1.5rem 0;
-            border-top: solid 1px rbga(255, 255, 255, .3);
-            border-bottom: solid 1px rgba($color: var(--gray-light), $alpha: 0.4);
             font-size: 1.5rem;
         }
 
@@ -148,9 +147,9 @@ ul {
     }
 
     &__btn {
-
         padding: 1.2rem;
         background: var(--primary);
+        border: 1px solid var(--primary);
         border-radius: 0.5rem;
 
         color:white;
@@ -163,6 +162,18 @@ ul {
         &.-white {
             background: white;
             color: var(--purple);
+
+            &:active {
+                background: none;
+                border: 1px solid white;
+                color: white;
+            }
+        }
+
+        &:active {
+            background: none;
+            border: 1px solid var(--purple);
+            color: var(--purple);
         }
     }
 
@@ -171,10 +182,10 @@ ul {
         color: white;
         padding: 5rem 3rem;
 
-        // & .m-card__features {
-        //     border-top: solid 1px var(--purple);
-        //     border-bottom: solid 1px var(--purple);
-        // }
+        & .m-card__features {
+            border-top: solid 1px rgba($color: var(--gray-light), $alpha: 0.4);
+            border-bottom: solid 1px rgba($color: var(--gray-light), $alpha: 0.4);
+        }
 
     }
 
